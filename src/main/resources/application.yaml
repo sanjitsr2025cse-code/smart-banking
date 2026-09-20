@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: smart-banking-backend
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/smart_banking
+    username: root
+    password: Sanjit2007#
+
+
