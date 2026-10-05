@@ -5,6 +5,7 @@ import com.sanjit.banking.dto.UserResponse;
 import com.sanjit.banking.dto.UserUpdateRequest;
 import com.sanjit.banking.entity.User;
 import com.sanjit.banking.exception.ResourceNotFoundException;
+import com.sanjit.banking.exception.ConflictException;
 import com.sanjit.banking.repository.UserRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -121,7 +122,7 @@ public class UserServiceImpl implements UserService {
                 );
 
         if (existingUser.isPresent()) {
-            throw new ResourceNotFoundException(
+            throw new ConflictException(
                     "Email already registered"
             );
         }

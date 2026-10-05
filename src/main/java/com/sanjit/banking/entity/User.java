@@ -71,7 +71,6 @@ public class User {
     }
     @PreUpdate
     protected void onUpdate() {
-        updatedAt=LocalDateTime.now();
-        createdAt=LocalDateTime.now();
+        updatedAt = LocalDateTime.now();
     }
 }

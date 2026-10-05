@@ -53,6 +53,6 @@ public class AuthServiceImpl implements AuthService {
         String token =
                 jwtService.generateToken(user);
 
-        return new LoginResponse(token);
+        return new LoginResponse(token, user.getId());
     }
 }
